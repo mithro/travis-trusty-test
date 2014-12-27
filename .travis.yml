@@ -2,7 +2,7 @@ language:
  - c
 
 install:
- - ./.travis-trusty-setup.sh
+ - wget -O- https://raw.githubusercontent.com/mithro/travis-trusty/master/travis-setup.sh | bash
 
 script:
- - ./.travis-trusty-run.sh ./.travis-check.sh
+ - /trusty/run.sh ./docker-test/check.sh
