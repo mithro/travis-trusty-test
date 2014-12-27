@@ -8,4 +8,6 @@ install:
  - bash /tmp/setup.sh
 
 script:
+ - md5sum /trusty/run.sh
+ - cat /trusty/run.sh
  - /trusty/run.sh ./docker-test/check.sh
