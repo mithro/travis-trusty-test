@@ -10,4 +10,4 @@ install:
  - bash /tmp/setup.sh
 
 script:
- - /tmp/run.sh $PWD/docker-test/check.sh
+ - /trusty/run.sh $PWD/docker-test/check.sh
