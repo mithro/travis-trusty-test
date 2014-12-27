@@ -11,7 +11,7 @@ fi
 
 # Check that I'm still running under the travis user id
 if [ $(whoami) != "travis" ]; then
-  echo "Username not travis!"
+  echo "Username $(whoami) not travis!"
   exit 1
 fi
 
