@@ -2,7 +2,10 @@ language:
  - c
 
 install:
- - wget -O- https://raw.githubusercontent.com/mithro/travis-trusty/master/setup.sh | bash
+ - wget -O /tmp/setup.sh https://raw.githubusercontent.com/mithro/travis-trusty/master/setup.sh
+ - md5sum /tmp/setup.sh
+ - cat /tmp/setup.sh
+ - bash /tmp/setup.sh
 
 script:
  - /trusty/run.sh ./docker-test/check.sh
