@@ -8,6 +8,7 @@ install:
  - bash /tmp/setup.sh
 
 script:
+ - ls -l /trusty/run.sh
  - md5sum /trusty/run.sh
  - cat /trusty/run.sh
  - ls $PWD
