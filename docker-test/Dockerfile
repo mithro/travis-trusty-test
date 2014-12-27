@@ -1,4 +1,4 @@
-FROM mithro/travis-trusty:base
+FROM mithro/travis-trusty:latest
 
 MAINTAINER mithro@mithis.com
 
