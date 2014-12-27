@@ -29,6 +29,7 @@ sudo apt-key list || true
 sudo apt-key update || true
 
 # Check I can apt-get install
+sudo apt-get update
 sudo apt-get -y install vim
 
 # Check I can compile something
