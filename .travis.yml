@@ -20,6 +20,7 @@ script:
  - /tmp/run.sh ls -l
  - /tmp/run.sh ls -l $PWD
  - /tmp/run.sh whoami
+ - /tmp/run.sh which apt-key
  - /tmp/run.sh sudo apt-key list
  - /tmp/run.sh sudo apt-key update
  - /trusty/run.sh $PWD/docker-test/check.sh || true
