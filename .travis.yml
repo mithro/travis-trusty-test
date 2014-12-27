@@ -2,8 +2,6 @@ language:
  - c
 
 install:
- - whoami
- - grep $(whoami) /etc/passwd
  - wget -O /tmp/setup.sh https://raw.githubusercontent.com/mithro/travis-trusty/master/setup.sh
  - md5sum /tmp/setup.sh
  - cat /tmp/setup.sh
