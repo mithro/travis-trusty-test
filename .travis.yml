@@ -13,7 +13,10 @@ script:
  - ls -l /trusty/run.sh
  - md5sum /trusty/run.sh
  - cat /trusty/run.sh
- - ls $PWD
- - ls /trusty/$PWD
+ - ls -l $PWD
+ - ls -l /trusty/$PWD
+ - /trusty/run.sh ls -l
+ - /trusty/run.sh ls -l $PWD
+ - /trusty/run.sh whoami
  - /trusty/run.sh $PWD/docker-test/check.sh || true
  - /tmp/run.sh $PWD/docker-test/check.sh
