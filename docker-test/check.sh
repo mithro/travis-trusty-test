@@ -6,14 +6,16 @@ set -e
 cd /tmp
 
 # Check that I'm running under trusty
-if [ $(lsb_release -c -s) != "trusty" ]; then
-  echo "Not running under trusty!"
+DISTRO=$(lsb_release -c -s)
+if [ $DISTRO != "trusty" ]; then
+  echo "Not running under trusty! (Running $DISTRO)"
   exit 1
 fi
 
 # Check that I'm still running under the travis user id
-if [ $(whoami) != "travis" ]; then
-  echo "Username $(whoami) not travis!"
+WHOAMI=$(whoami)
+if [ $WHOAMI != "travis" ]; then
+  echo "Username $WHOAMI not travis!"
   exit 1
 fi
 
