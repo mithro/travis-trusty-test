@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 set -x
 set -e
@@ -19,7 +19,7 @@ fi
 sudo /bin/true
 
 # Check I can apt-get install
-sudo apt-get install vim
+sudo apt-get -y install vim
 
 # Check I can compile something
 cat > test.c <<EOF
