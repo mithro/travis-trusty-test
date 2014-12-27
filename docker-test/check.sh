@@ -20,14 +20,6 @@ fi
 # Check I can still use sudo
 sudo /bin/true
 
-which apt-key || true
-sudo apt-key list || true
-sudo apt-key update || true
-sudo apt-get -y --force-yes install add-apt-key ubuntu-keyring ubuntu-extras-keyring
-which apt-key || true
-sudo apt-key list || true
-sudo apt-key update || true
-
 # Check I can apt-get install
 sudo apt-get update
 sudo apt-get -y install vim
