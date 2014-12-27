@@ -10,4 +10,6 @@ install:
 script:
  - md5sum /trusty/run.sh
  - cat /trusty/run.sh
- - /trusty/run.sh ./docker-test/check.sh
+ - ls $PWD
+ - ls /trusty/$PWD
+ - /trusty/run.sh $PWD/docker-test/check.sh
