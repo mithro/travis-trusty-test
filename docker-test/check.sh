@@ -20,10 +20,10 @@ fi
 # Check I can still use sudo
 sudo /bin/true
 
-# Check I can apt-get install
-sudo apt-get -y --force-yes install vim
+sudo apt-get -y --force-yes install add-apt-key ubuntu-keyring ubuntu-extras-keyring
 
-umask
+# Check I can apt-get install
+sudo apt-get -y install vim
 
 # Check I can compile something
 cat > test.c <<EOF
