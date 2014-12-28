@@ -3,8 +3,6 @@
 set -x
 set -e
 
-cd /tmp
-
 # Check that I'm running under trusty
 DISTRO=$(lsb_release -c -s)
 if [ $DISTRO != "trusty" ]; then
@@ -24,6 +22,7 @@ OLD_PWD=$1
 CUR_PWD=$PWD
 if [ "$OLD_PWD" != "$CUR_PWD" ]; then
   echo "Current directory was '$CUR_PWD' not '$OLD_PWD'!"
+  exit 1
 fi
 
 # Check I can still use sudo
