@@ -19,6 +19,13 @@ if [ $WHOAMI != "travis" ]; then
   exit 1
 fi
 
+# Check that the PWD is the same location
+OLD_PWD=$1
+CUR_PWD=$PWD
+if [ "$OLD_PWD" != "$CUR_PWD" ]; then
+  echo "Current directory was '$CUR_PWD' not '$OLD_PWD'!"
+fi
+
 # Check I can still use sudo
 sudo /bin/true
 
