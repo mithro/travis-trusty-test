@@ -8,4 +8,4 @@ install:
  - bash /tmp/setup.sh
 
 script:
- - /trusty/run.sh $PWD/docker-test/check.sh $PWD
+ - /trusty/run.py $PWD/docker-test/check.sh $PWD
