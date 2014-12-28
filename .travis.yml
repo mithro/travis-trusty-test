@@ -1,13 +1,14 @@
 language: 
  - c
 
+env:
+ - DEBUG_TRUSTY=1
+
 install:
- - export DEBUG_TRUSTY=1
  - wget -O /tmp/setup.sh https://raw.githubusercontent.com/mithro/travis-trusty/master/setup.sh
  - md5sum /tmp/setup.sh
  - cat /tmp/setup.sh
  - bash /tmp/setup.sh
 
 script:
- - export DEBUG_TRUSTY=1
  - /trusty/run.py $PWD/docker-test/check.sh $PWD
