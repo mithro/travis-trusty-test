@@ -29,9 +29,9 @@ fi
 sudo /bin/true
 
 # Check I can allocate pts
-if [ $(ls -l /dev/pty | wc -l) -eq 0 ]; then
-  echo "No pty's found in /dev/pty!"
-  ls -l /dev/pty
+if [ $(ls -l /dev/pts | wc -l) -eq 0 ]; then
+  echo "No pts's found in /dev/pts!"
+  ls -l /dev/pts
   exit 1
 fi
 
