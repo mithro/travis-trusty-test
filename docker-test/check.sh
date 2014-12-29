@@ -28,6 +28,13 @@ fi
 # Check I can still use sudo
 sudo /bin/true
 
+# Check I can allocate pts
+if [ $(ls -l /dev/pty | wc -l) -eq 0 ]; then
+  echo "No pty's found in /dev/pty!"
+  ls -l /dev/pty
+  exit 1
+fi
+
 # Check I can apt-get install
 sudo apt-get update
 sudo apt-get -y install vim
