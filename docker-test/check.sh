@@ -3,6 +3,8 @@
 set -x
 set -e
 
+mount
+
 # Check that I'm running under trusty
 DISTRO=$(lsb_release -c -s)
 if [ $DISTRO != "trusty" ]; then
@@ -26,6 +28,7 @@ if [ "$OLD_PWD" != "$CUR_PWD" ]; then
 fi
 
 # Check I can still use sudo
+ls -l $(which sudo)
 sudo /bin/true
 
 # Check I can allocate pts
