@@ -51,3 +51,7 @@ EOF
 ls -l test.c
 gcc test.c -o test
 ./test
+
+# Check /dev/tty // gpg
+ls -l /dev/tty
+echo "testing" | gpg --passphrase-fd 0 --output /tmp/bash.gpg $(which bash)
